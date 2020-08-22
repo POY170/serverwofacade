@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 
-package serverwofacade;
+package main;
+import serverwofacade.MyFacade;
 public class ServerWOFacade {
     public static void main(String[] args) {
-        ScheduleServer scheduleServer = new ScheduleServer();
+        /*ScheduleServer scheduleServer = new ScheduleServer();
 	scheduleServer.startBooting();
 	scheduleServer.readSystemConfigFile();
 	scheduleServer.init();
@@ -21,7 +22,9 @@ public class ServerWOFacade {
 	scheduleServer.destroySystemObjects();
 	scheduleServer.destoryListeners();
 	scheduleServer.destoryContext();
-	scheduleServer.shutdown();
+	scheduleServer.shutdown();*/
+        MyFacade obj = MyFacade.getMyFacadeObject();
+        obj.Schedule();
     }
     
 }
